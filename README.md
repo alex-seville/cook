@@ -25,7 +25,7 @@ The documentation is still a work in progress.
 #Completed
 
 		
-- [The Tag Syntax](#TheTagSyntax)
+- [The Tag Syntax](#tag-based-syntax)
 
 		
 #Still Missing...
