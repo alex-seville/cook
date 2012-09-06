@@ -86,7 +86,7 @@ And here is an example of a tag which contains an html link:
 		
     
     {if user.isAdmin}
-        &lt;a href="/admin"&gt;Admin Panel&lt;/a&gt;
+        <a href="/admin">Admin Panel</a>;
     {/if}
     		
 
