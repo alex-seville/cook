@@ -221,7 +221,7 @@ For example:
 
 		
     
-    &lt;script&gt; user = {{name: "{write user.name/}"}}&lt;/script&gt;
+    <script> user = {{name: "{write user.name/}"}}</script>
     		
 
 		
@@ -229,7 +229,7 @@ Which would output something like this this:
 
 		
     
-    &lt;script&gt; user = {name: "John Doe" }&lt;/script&gt;
+    <script> user = {name: "John Doe" }</script>
     		
 
 		
@@ -252,7 +252,7 @@ For example, this code:
 
 		
     
-    {if user.isLoggedIn &gt;&gt; elem div &gt;&gt; elem a &gt;&gt; write $uppercase &gt;&gt; write user.name /}
+    {if user.isLoggedIn >> elem div >> elem a >> write $uppercase >> write user.name /}
     		
 
 		
@@ -261,13 +261,13 @@ Outputs pretty much the same thing as this code:
 		
     
     {if user.isLoggedIn}
-        &lt;div&gt;
-            &lt;a&gt;
+        <div>
+            <a>
                 {write $uppercase}
                     {write user.name /}
                 {/write}
-            &lt;/a&gt;
-        &lt;/div&gt;
+            </a>
+        </div>
     {/if}
     		
 
@@ -277,7 +277,7 @@ will be parsed as belonging to the `write $uppercase` tag:
 
 		
     
-    {if user.isLoggedIn &gt;&gt; elem div &gt;&gt; elem a &gt;&gt; write $uppercase}
+    {if user.isLoggedIn >> elem div >> elem a >> write $uppercase}
         Hi {write user.name /}, and welcome!
     {/}
     		
@@ -316,11 +316,11 @@ Would output this:
 
 		
     
-    &lt;div&gt;
-        &lt;span&gt;
+    <div>
+        <span>
             Lorem Ipsum!
-        &lt;/span&gt;
-    &lt;/div&gt;
+        </span>
+    </div>
     		
 
 		
@@ -333,7 +333,7 @@ For example, this would still output valid html:
 
 		
     
-    {section &gt;&gt; ul &gt;&gt; li &gt;&gt; span &gt;&gt; strong &gt;&gt; write user.name /}
+    {section >> ul >> li >> span >> strong >> write user.name /}
     		
 
     
@@ -379,7 +379,7 @@ You can write it like this:
 
 		
     
-    { =isMember &gt;&gt; ul &gt;&gt; =credentials &gt;&gt; li &gt;&gt; =$loop.value.label /}
+    { =isMember >> ul >> =credentials >> li >> =$loop.value.label /}
     		
 
 		
@@ -387,7 +387,7 @@ Instead of:
 
 		
     
-    {if isMember &gt;&gt; elem ul &gt;&gt; each credentials &gt;&gt; elem li &gt;&gt; write $loop.value.label /}
+    {if isMember >> elem ul >> each credentials >> elem li >> write $loop.value.label /}
     		
 
 		
@@ -396,13 +396,13 @@ Which is already a compact equivalent of this:
 		
     
     {if isMember}
-        &lt;ul&gt;
+        <ul>
             {each credentials}
-                &lt;li&gt;
+                <li>
                     {write $loop.value.label /}
-                &lt;/li&gt;
+                </li>
             {/each}
-        &lt;/ul&gt;
+        </ul>
     {/if}
     		
 
